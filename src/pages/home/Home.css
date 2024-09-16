@@ -1,0 +1,36 @@
+
+.main-content {
+  width: 100%;
+  height:100%;
+  /* background: #72f884; */
+  /* 使用flex弹性布局 */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* align-content: flex-start; */
+  /* align-items: center; */
+  flex-shrink: 1;
+}
+.left-content {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  /* flex-basis: 250px; */
+  /* height: 100vh; */
+  /* background: rgb(238, 119, 34); */
+  /* flex-grow: 0; */
+}
+.right-content {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+  justify-content: space-between;
+  background: #fff;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* width: 200px;
+  height: 100vh; */
+  /* background: rgb(68, 133, 255); */
+  /* 表示该盒子自动占满剩余空间（往下展开） */
+  flex-grow: 8;
+}

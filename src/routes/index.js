@@ -1,17 +1,89 @@
 import { Navigate } from "react-router-dom"
-import About from "../pages/About"
-import Message from "../pages/Message"
-import News from "../pages/News"
-import Home from "../pages/main_home/Home"
+import About from "../temp/About"
+import Message from "../temp/Message"
+import News from "../temp/News"
+import Home from "../pages/home/Home"
+import UploadHome from "../pages/home/UploadHome"
+import AuditHome from "../pages/home/AuditHome"
+import PlantsManagementHome from "../pages/plant_management/PlantsManagementHome"
+import MyPlants from "../pages/plant_management/MyPlants"
 
 
 const ary =  [
+   
     {
-        path: '/ui/about',
-        element: <About/>
+        path: '/ui/home',
+        element:<Home/>,
+        children:[
+            {
+                path: '/ui/home',
+                element: <Navigate to="/ui/home/upload"/>
+            },
+            {
+                path: 'upload',
+                element: <UploadHome/>,
+                children:[
+                    {
+                        path: 'excel',
+                        element: <UploadHome/>
+                    },
+                    {
+                        path: 'csv',
+                        element: <About/>
+                    },
+                    {
+                        path: 'others',
+                        element: <About/>
+                    }
+                ]
+            },
+            {
+                path: 'audit',
+                element: <AuditHome/>,
+                children:[
+                    {
+                        path: 'before',
+                        element:<AuditHome/>
+                    },
+                    {
+                        path: 'after',
+                        element:<AuditHome/>
+                    },
+                    {
+                        path: 'result',
+                        element:<AuditHome/>
+                    }
+                ]
+            },
+
+            {
+                path: 'adjust',
+                element: <Message/>
+            },
+    
+            {
+                path: 'report',
+                element: <Message/>
+            },
+
+            {
+                path: 'dashboard',
+                element: <Message/>,
+                children:[
+                    {
+                        path: 'line',
+                        element:<News/>
+                    },
+                    {
+                        path: 'pie',
+                        element:<News/>
+                    }
+                ]
+            }
+        ]
     },
     {
-        path: '/ui/tools',
+        path: '/ui/workflow',
         element: <About/>
     },
     {
@@ -19,76 +91,52 @@ const ary =  [
         element: <About/>
     },
     {
+        path: '/ui/tools',
+        element: <About/>
+    },
+    {
         path: '/ui/setting',
         element: <About/>
     },
     {
-        path: '/ui/home',
-        element:<Home/>,
+        path: '/ui/plants',
+        element: <PlantsManagementHome/>,
         children:[
             {
-                path: 'about-us',
-                element: <About/>,
+                path: '/ui/plants',
+                element: <Navigate to="/ui/plants"/>
+            },
+            {
+                path: 'myplants',
+                element: <MyPlants/>,
+            },
+            {
+                path: 'control',
+                element: <MyPlants/>,
+            },
+            {
+                path: 'sales',
+                element: <PlantsManagementHome/>,
                 children:[
                     {
-                        path: 'aim',
-                        element: <About/>
+                        path: 'grain',
+                        element: <PlantsManagementHome/>
                     },
                     {
-                        path: 'vision',
-                        element: <News/>
+                        path: 'Fruits',
+                        element: <PlantsManagementHome/>
+                    },
+                    {
+                        path: 'others',
+                        element: <PlantsManagementHome/>
                     }
                 ]
             },
-            {
-                path: 'services',
-                element: <Message/>,
-                children:[
-                    {
-                        path: 'services1',
-                        element:<News/>
-                    },
-                    {
-                        path: 'services2',
-                        element:<News/>
-                    },
-                    {
-                        path: 'services3',
-                        element:<News/>
-                    }
-                ]
-
-            },
-            {
-                path: 'contact',
-                element: <Message/>
-            },
-            {
-                path: 'support',
-                element: <Message/>
-            },
-            {
-                path: 'events',
-                element: <Message/>,
-                children:[
-                    {
-                        path: 'events1',
-                        element:<News/>
-                    },
-                    {
-                        path: 'events2',
-                        element:<News/>
-                    }
-                ]
-
-            },
-
-
         ]
     },
     {
         path: '/',
-        element: <Navigate to="/ui/home"/>
+        element: <Navigate to="/ui/plants"/>
     }
 ]
 

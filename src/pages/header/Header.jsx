@@ -22,11 +22,13 @@ const Header= ()=>{
             <div>
             <Nav>
                 <MyNavLink to="/ui/home">Home</MyNavLink>
+                <MyNavLink to="/ui/workflow">Workflow</MyNavLink>
                 <MyNavLink to="/ui/inbox">Inbox</MyNavLink>
                 <MyNavLink to="/ui/tools">Tools</MyNavLink>
                 <MyNavLink to="/ui/settings">Setting</MyNavLink>
+                <MyNavLink to="/ui/plants">PlantsManage</MyNavLink>
             </Nav> 
-            <Outlet></Outlet>
+            {/* <Outlet></Outlet> */}
             </div>
         )
 }

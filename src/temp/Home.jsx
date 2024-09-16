@@ -20,7 +20,10 @@ export default function Home(){
             
             <Outlet className={
             "ag-theme-quartz-dark"
-        }></Outlet>
+        }>
+
+        </Outlet>
+        
         </div>
     )
 }

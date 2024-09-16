@@ -7,8 +7,7 @@ import React, {useMemo, useState } from 'react';
 import { Input } from 'antd';
 import axios from 'axios';
 import { useSelector, useDispatch } from "react-redux";
-import { upload, download } from "../reducers/cartAction";
-import { json } from 'react-router-dom';
+import { saveFileData,saveFileInfos } from "../reduxes/fileAction";
 
 const { Search } = Input;
 
@@ -107,7 +106,7 @@ const About = () => {
             { make: 'Fiat', model: 'Panda', price: 13724, electric: false, month: 'November' },
             { make: 'Jaguar', model: 'I-PACE', price: 69425, electric: true, month: 'May' },
         ];
-        dispatch(upload(data));
+        dispatch(saveFileData(data));
         console.log("onsearch --"+JSON.stringify({state}));
         // axios.post('http://127.0.0.1:8080/api/v1/vehicles', {
         //     firstName: 'Fred',

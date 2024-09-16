@@ -3,17 +3,17 @@
 import React from "react";
 import styled from "styled-components";
 import { SidebarData } from "./SideBarData";
-import SubMenu from "./submenu/SubMenu";
+import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
 
 
 const SidebarNav = styled.nav`
     background: #15171c;
-    width: 200px;
+    // width: 230px;
     height: 100vh;
     display: flex;
     justify-content: center;
-    position: fixed;
+    // position: fixed;
     // top: 0;
     // left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
     // left: "0" ;
@@ -22,7 +22,7 @@ const SidebarNav = styled.nav`
 `;
 
 const SidebarWrap = styled.div`
-    width: 100%;
+    // width: 100%;
 `;
 
 const SideNavbar = () => {

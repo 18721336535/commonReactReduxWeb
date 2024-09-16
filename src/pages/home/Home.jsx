@@ -1,8 +1,7 @@
 
 import React from "react";
 import { Outlet } from "react-router-dom";
-// import RightArea from './RightArea';
-import SideNavBar from './SideNavBar';
+import SideNavBar from './sideBar/SideNavBar';
 import './Home.css'
 
 const Home = () =>{
@@ -11,7 +10,6 @@ const Home = () =>{
           <div className="main-content">
             <div className="left-content">
                 <SideNavBar/>
-            
             </div>
             <div className="right-content">
                <Outlet></Outlet>

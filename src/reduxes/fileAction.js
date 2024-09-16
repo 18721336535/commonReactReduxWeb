@@ -1,16 +1,16 @@
 // import { ADD_ITEM, DELETE_ITEM } from "../actionTypes/actionTypes";
 
-const upload = (data) => {
+const saveFileInfos = (data) => {
   return {
-    type: "UPLOAD",
+    type: "FILESINFOS",
     data: data
   };
 };
 
-const download = () => {
+const saveFileData = () => {
   return {
     type: "DOWNLOAD",
   };
 };
 
-export { upload, download };
+export { saveFileInfos, saveFileData };
